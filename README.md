@@ -19,6 +19,8 @@ Add the download the folder the compile it ( use openFOAM 2206)
   
 # Lagrangian 
 
+Drag Work 
+
 * changes kinematicParcel.C calculation of dragWork for individual particle 
 * new source term Sw matrix is constructed in kinematicCloudI.H
 
@@ -29,11 +31,11 @@ New injection models have been added
 
 * CellMassFlowRateInjectionModel 
               
-  calculates number of parcels per timestep for a cellface (part of the boundary face) and injects ramdomly in the cell. note if parcel count is fraction then the particle count accumlates
+  calculates number of parcels per timestep for a cellface (part of the boundary face) and injects ramdomly in the cell. note if parcel count is a fraction (<1) then the particle count accumlates
 
 * MassFlowRateInjectionRPF
                     
-   calculates number of parcels per timestep and injects based on uniform random distribution across the patch face
+   calculates number of parcels per timestep and injects based on uniform random distribution function across the patch face
 
 
 
