@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2306                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    "rho.*"
+    {
+        solver          diagonal;
+    }
+
+    p_rgh
+    {
+        solver           GAMG;
+        smoother        DICGaussSeidel;
+        minIter         2;
+        tolerance       1e-06;
+        relTol          0;
+    }
+
+    p_rghFinal
+    {
+        $p_rgh;
+        relTol          0;
+    }
+
+    Phi
+    {
+        $p_rgh;
+    }
+
+    "(U|k|omega)"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+
+        tolerance       1e-06;
+        relTol          0;
+    }
+
+    "(U|k|omega)Final"
+    {
+        $U;
+        relTol          0;
+    }
+
+    "(Yi|air)"
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        minIter         6;
+        tolerance       1e-06;
+        relTol          0;
+    }
+
+    h
+    {
+
+          solver          PBiCGStab;
+        preconditioner  DILU;
+        minIter         6;
+        tolerance       1e-06;
+        relTol          0;
+
+    }
+
+    hFinal
+    {
+        $h;
+    }
+}
+
+/*potentialFlow
+{
+    nNonOrthogonalCorrectors 5;
+}
+*/
+
+PIMPLE
+{
+    nOuterCorrectors 50;
+    nCorrectors     5;
+    nNonOrthogonalCorrectors 1;
+    momentumPredictor  no;
+        transonic      yes;
+
+
+        residualControl
+           {
+               U
+               {
+                       tolerance  1e-6;
+                       relTol      0.1;
+               }
+
+               p_rgh
+               {
+                       tolerance  1e-6;
+                       relTol      0.1;
+               }
+
+               h
+               {
+
+                       tolerance  1e-6;
+                       relTol      0.1;
+               }
+
+            }
+       }
+
+
+
+
+
+relaxationFactors
+{
+    equations
+    {
+        ".*"            1;
+    }
+}
+
+
+// ************************************************************************* //
