@@ -1,0 +1,155 @@
+ /*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2306                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     InviscidReactingParcelFoam;
+
+startFrom        latestTime ;
+
+startTime          0;
+
+stopAt          endTime;
+
+endTime         0.03;
+
+deltaT          1e-07;
+
+writeControl    adjustable;
+
+writeInterval   10e-05;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  10;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+adjustTimeStep  no;
+
+maxCo           0.2;
+
+maxDeltaT       1000e-09;
+
+
+functions
+
+{
+
+MachNo1
+ {
+    // Mandatory entries (unmodifiable)
+    type            MachNo;
+    libs            (fieldFunctionObjects);
+    writeControl    adjustable;
+    writeInterval   10e-05;
+}
+
+fieldAverage1
+{
+
+    type            fieldAverage;
+    libs            (fieldFunctionObjects);
+
+fields
+    (
+        Ma
+        {
+            mean        yes;
+            prime2Mean  no;
+            base        time;
+
+        }
+    );
+timeStart          0.012;
+    writeControl    adjustable;
+    writeInterval   10e-05;
+
+
+}
+
+
+
+fieldAverage2
+{
+
+    type            fieldAverage;
+    libs            (fieldFunctionObjects);
+
+fields
+
+    (
+        thetaP
+        {
+            mean        yes;
+            prime2Mean  no;
+            base        time;
+
+        }
+    );
+
+
+
+timeStart          0.012;
+    writeControl    adjustable;
+    writeInterval   10e-05;
+
+
+}
+
+
+fieldAverage3
+{
+
+    type            fieldAverage;
+    libs            (fieldFunctionObjects);
+
+fields
+
+    (
+        T
+        {
+            mean        yes;
+            prime2Mean  no;
+            base        time;
+
+        }
+    );
+
+
+
+timeStart          0.012;
+    writeControl    adjustable;
+    writeInterval   10e-05;
+
+
+}
+
+
+
+
+
+
+
+}
+
+// ************************************************************************* //

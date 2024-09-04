@@ -1,0 +1,36 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       regIOobject;
+    location    "constant/polyMesh";
+    object      pointZones;
+    meta
+    {
+        names           2 ( block1I2block2I10CutPointZone block2I2block3I11CutPointZone );
+    }
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+2
+(block1I2block2I10CutPointZone
+{
+    type            pointZone;
+    pointLabels     List<label> 0();
+}
+block2I2block3I11CutPointZone
+{
+    type            pointZone;
+    pointLabels     List<label> 0();
+}
+)
+
+// ************************************************************************* //

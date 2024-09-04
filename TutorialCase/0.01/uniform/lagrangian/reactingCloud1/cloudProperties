@@ -1,0 +1,442 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "0.01/uniform/lagrangian/reactingCloud1";
+    object      cloudProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+geometry        coordinates;
+
+processor0
+{
+    particleCount   205127;
+}
+
+processor1
+{
+    particleCount   1620039;
+}
+
+processor2
+{
+    particleCount   0;
+}
+
+processor3
+{
+    particleCount   0;
+}
+
+processor4
+{
+    particleCount   0;
+}
+
+processor5
+{
+    particleCount   0;
+}
+
+processor6
+{
+    particleCount   0;
+}
+
+processor7
+{
+    particleCount   0;
+}
+
+processor8
+{
+    particleCount   0;
+}
+
+processor9
+{
+    particleCount   0;
+}
+
+processor10
+{
+    particleCount   0;
+}
+
+processor11
+{
+    particleCount   0;
+}
+
+processor12
+{
+    particleCount   0;
+}
+
+processor13
+{
+    particleCount   0;
+}
+
+processor14
+{
+    particleCount   0;
+}
+
+processor15
+{
+    particleCount   0;
+}
+
+processor16
+{
+    particleCount   0;
+}
+
+processor17
+{
+    particleCount   0;
+}
+
+processor18
+{
+    particleCount   0;
+}
+
+processor19
+{
+    particleCount   0;
+}
+
+processor20
+{
+    particleCount   0;
+}
+
+processor21
+{
+    particleCount   0;
+}
+
+processor22
+{
+    particleCount   0;
+}
+
+processor23
+{
+    particleCount   0;
+}
+
+processor24
+{
+    particleCount   0;
+}
+
+processor25
+{
+    particleCount   0;
+}
+
+processor26
+{
+    particleCount   0;
+}
+
+processor27
+{
+    particleCount   0;
+}
+
+processor28
+{
+    particleCount   0;
+}
+
+processor29
+{
+    particleCount   0;
+}
+
+processor30
+{
+    particleCount   0;
+}
+
+processor31
+{
+    particleCount   0;
+}
+
+processor32
+{
+    particleCount   0;
+}
+
+processor33
+{
+    particleCount   0;
+}
+
+processor34
+{
+    particleCount   0;
+}
+
+processor35
+{
+    particleCount   0;
+}
+
+processor36
+{
+    particleCount   0;
+}
+
+processor37
+{
+    particleCount   0;
+}
+
+processor38
+{
+    particleCount   0;
+}
+
+processor39
+{
+    particleCount   0;
+}
+
+processor40
+{
+    particleCount   0;
+}
+
+processor41
+{
+    particleCount   0;
+}
+
+processor42
+{
+    particleCount   0;
+}
+
+processor43
+{
+    particleCount   0;
+}
+
+processor44
+{
+    particleCount   0;
+}
+
+processor45
+{
+    particleCount   0;
+}
+
+processor46
+{
+    particleCount   0;
+}
+
+processor47
+{
+    particleCount   0;
+}
+
+processor48
+{
+    particleCount   0;
+}
+
+processor49
+{
+    particleCount   0;
+}
+
+processor50
+{
+    particleCount   0;
+}
+
+processor51
+{
+    particleCount   0;
+}
+
+processor52
+{
+    particleCount   0;
+}
+
+processor53
+{
+    particleCount   0;
+}
+
+processor54
+{
+    particleCount   0;
+}
+
+processor55
+{
+    particleCount   0;
+}
+
+processor56
+{
+    particleCount   0;
+}
+
+processor57
+{
+    particleCount   0;
+}
+
+processor58
+{
+    particleCount   0;
+}
+
+processor59
+{
+    particleCount   0;
+}
+
+processor60
+{
+    particleCount   0;
+}
+
+processor61
+{
+    particleCount   0;
+}
+
+processor62
+{
+    particleCount   0;
+}
+
+processor63
+{
+    particleCount   0;
+}
+
+processor64
+{
+    particleCount   0;
+}
+
+processor65
+{
+    particleCount   0;
+}
+
+processor66
+{
+    particleCount   0;
+}
+
+processor67
+{
+    particleCount   0;
+}
+
+processor68
+{
+    particleCount   0;
+}
+
+processor69
+{
+    particleCount   0;
+}
+
+processor70
+{
+    particleCount   0;
+}
+
+processor71
+{
+    particleCount   0;
+}
+
+processor72
+{
+    particleCount   0;
+}
+
+processor73
+{
+    particleCount   0;
+}
+
+processor74
+{
+    particleCount   0;
+}
+
+processor75
+{
+    particleCount   0;
+}
+
+processor76
+{
+    particleCount   0;
+}
+
+processor77
+{
+    particleCount   0;
+}
+
+processor78
+{
+    particleCount   0;
+}
+
+processor79
+{
+    particleCount   0;
+}
+
+processor80
+{
+    particleCount   0;
+}
+
+processor81
+{
+    particleCount   0;
+}
+
+processor82
+{
+    particleCount   0;
+}
+
+processor83
+{
+    particleCount   0;
+}
+
+
+// ************************************************************************* //
