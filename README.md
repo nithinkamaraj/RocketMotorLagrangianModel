@@ -6,7 +6,7 @@
          
 The model is built for openFoam 2206.    
 
-download the folder, source bashrc file and compile it.
+Download the folder, source bashrc file and compile it.
 
 ## Folder Details 
 
@@ -20,8 +20,8 @@ download the folder, source bashrc file and compile it.
 # Lagrangian 
 
 Drag Work 
-* changes kinematicParcel.C calculation of dragWork for individual particle 
-* new drag source term Sw matrix is constructed in kinematicCloudI.H
+* Changes kinematicParcel.C calculation of dragWork for individual particle 
+* New drag source term Sw matrix is constructed in kinematicCloudI.H
 
 
 Particle injection models 
