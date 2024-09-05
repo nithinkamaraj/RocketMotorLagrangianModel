@@ -30,7 +30,7 @@ New injection models have been added
 
 * CellMassFlowRateInjectionModel 
               
-  calculates number of parcels per timestep for a cellface (part of the boundary face) and injects ramdomly in the cell. note if parcel count is a fraction (<1) then the particle count accumlates
+  calculates number of parcels per timestep for a cellface (part of the boundary face) and injects ramdomly in the cell. note if parcel count is < 1 then the particle count accumlates
 
 * MassFlowRateInjectionRPF
                     
